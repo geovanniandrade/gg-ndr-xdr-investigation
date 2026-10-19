@@ -6,3 +6,13 @@ body{background:#0b1320;font-family:Inter,Segoe UI,Arial,sans-serif}.app{grid-te
 
 /* Navigation: training resources in the top-right header */
 .top-actions{display:flex;align-items:center;gap:10px;margin-left:auto}.top-link{background:#132d42;border:1px solid #36718a;color:#bdeef5;border-radius:9px;padding:9px 17px;font-weight:750;white-space:nowrap;transition:background .15s ease}.top-link:hover,.top-link.active{background:#1a5368;border-color:#52cddd;color:#fff}.top{gap:20px}.top .top-actions{flex-shrink:0}@media(max-width:610px){.top-actions{gap:5px}.top-link{padding:8px 10px;font-size:12px}.top b{font-size:11px}}
+
+/* GG Security project identity — #06B6D4 */
+:root {--cyan:#06B6D4;--blue:#06B6D4}
+.logo{background:linear-gradient(135deg,#06B6D4,#0c7d94);color:#081422}
+.nav.active,.nav:hover{background:#0c7d9455;border-color:#06B6D4;color:#f3fbff}
+.top-link:hover,.top-link.active,.btn.primary{background:#0c7d94;border-color:#06B6D4;color:white}
+.top-link,.pill,.xdr-eyebrow,.kicker{color:#6ce1f2;border-color:#06B6D488}
+.xdr-bars div,.xdr-kpi .progress div,.progress div{background:linear-gradient(0deg,#0c7d94,#06B6D4)}
+.xdr-node:hover,.xdr-node.on,.topo-item.selected{border-color:#06B6D4;box-shadow:0 0 0 2px #06B6D450}
+input:focus,textarea:focus,select:focus{outline-color:#06B6D4}
