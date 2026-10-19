@@ -9,9 +9,9 @@
 </style><link rel="stylesheet" href="report-v2.css"><link rel="stylesheet" href="xdr-ui.css"></head><body>
 <div class="app"><aside class="side"><div class="brand"><span class="logo">GG</span><div>SECURITY<small>NDR / XDR</small></div></div>
 <nav class="navlist" aria-label="Navegação principal">
-<button class="nav active" data-page="dashboard">◈ &nbsp; Dashboard</button><button class="nav" data-page="estudos">▤ &nbsp; Estudos</button><button class="nav" data-page="investigacoes">◎ &nbsp; Investigações</button><button class="nav" data-page="playbooks">☷ &nbsp; Playbooks</button><button class="nav" data-page="prova">✎ &nbsp; Prova</button><button class="nav" data-page="relatorio">▣ &nbsp; Relatório</button></nav>
+<button class="nav active" data-page="dashboard">◈ &nbsp; Dashboard</button><button class="nav" data-page="investigacoes">◎ &nbsp; Investigações</button><button class="nav" data-page="playbooks">☷ &nbsp; Playbooks</button><button class="nav" data-page="relatorio">▣ &nbsp; Relatório</button></nav>
 <div class="sidefoot">Projeto educativo • 100% simulado<br>Sem telemetria corporativa real</div></aside>
-<main class="main"><header class="top"><div><b>GG / NDR & XDR INVESTIGATION</b><br><span>Security Operations • Investigação guiada</span></div><span class="pill">● MODO TREINAMENTO</span></header><div id="view" class="page" aria-live="polite"></div><footer class="footer">© GG Security • Projeto educacional independente de fabricante • <a href="https://github.com/geovanniandrade/gg-ndr-xdr-investigation" target="_blank" rel="noopener">GitHub</a> • Dados fictícios</footer></main></div>
+<main class="main"><header class="top"><div><b>GG / NDR & XDR INVESTIGATION</b><br><span>Security Operations • Investigação guiada</span></div><div class="top-actions"><button class="top-link" data-page="estudos" type="button">▤ &nbsp; Estudos</button><button class="top-link" data-page="prova" type="button">✎ &nbsp; Prova</button></div></header><div id="view" class="page" aria-live="polite"></div><footer class="footer">© GG Security • Projeto educacional independente de fabricante • <a href="https://github.com/geovanniandrade/gg-ndr-xdr-investigation" target="_blank" rel="noopener">GitHub</a> • Dados fictícios</footer></main></div>
 <script>
 "use strict";
 const CASES=[
@@ -50,8 +50,8 @@ try{completed=JSON.parse(localStorage.getItem("gg_ndr_completed")||"{}")}catch(_
 const el=document.getElementById("view");
 function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]))}
 const tag=(v)=>'<span class="tag '+(v==="Crítica"||v==="Alta"?"high":v==="Média"?"mid":"low")+'">'+esc(v)+'</span>';
-function go(p,id){page=p;activeCase=id??null;document.querySelectorAll(".nav").forEach(x=>x.classList.toggle("active",x.dataset.page===p));render();window.scrollTo({top:0,behavior:"instant"})}
-document.querySelectorAll(".nav").forEach(x=>x.addEventListener("click",()=>go(x.dataset.page)));
+function go(p,id){page=p;activeCase=id??null;document.querySelectorAll(".nav, .top-link").forEach(x=>x.classList.toggle("active",x.dataset.page===p));render();window.scrollTo({top:0,behavior:"instant"})}
+document.querySelectorAll(".nav, .top-link").forEach(x=>x.addEventListener("click",()=>go(x.dataset.page)));
 function header(title,description){return '<h1>'+title+'</h1><p class="lead">'+description+'</p>'}
 function dashboard(){const done=Object.keys(completed).length;return header("Central de Investigação","Treinamento prático em análise de alertas NDR e XDR, independente de fabricante.")+
 '<div class="notice">Todos os eventos, IPs e registros abaixo são <b>simulados</b>. Este site não monitora redes nem executa ações em ambientes reais.</div>'+
