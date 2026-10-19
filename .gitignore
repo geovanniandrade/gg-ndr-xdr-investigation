@@ -1,0 +1,6 @@
+.env
+*.log
+*.pcap
+*.pcapng
+*.zip
+secrets/
