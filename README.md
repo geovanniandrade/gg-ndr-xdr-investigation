@@ -6,6 +6,13 @@
 
 > Projeto **educacional**, não é laboratório de infraestrutura e não depende de Vigilant ou de um fabricante específico. Nunca utilize dados, IPs ou capturas corporativas sem autorização. Os endereços dos exemplos usam faixas reservadas à documentação (RFC 5737).
 
+## 🌐 Plataforma interativa
+
+**Site:** https://geovanniandrade.github.io/gg-ndr-xdr-investigation/  
+Inclui dashboard, estudos, nove investigações simuladas, playbooks, prova com correção e relatório imprimível em PDF. O conteúdo é fictício, e as atividades não realizam ações em uma rede real.
+
+> **Publicação:** o workflow `.github/workflows/deploy-pages.yml` realiza deploy automático em atualizações da branch `main`. Se a URL não abrir, configure **Settings → Pages → Build and deployment → Source: GitHub Actions** e confira a execução em **Actions**.
+
 ## 🚀 Comece aqui
 
 1. [📚 Estudos: NDR x XDR](docs/01-estudos.md)
